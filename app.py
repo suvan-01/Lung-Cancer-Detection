@@ -60,7 +60,7 @@ exposure_to_pollution = st.selectbox("Are You Regularly Exposed to Air Pollution
 
 long_term_illness = st.selectbox("Do You Have Any Long-Term Illness?", ["No", "Yes"])
 
-energy_level = st.number_input("Enter Your Energy Level (0 = Very Low, 10 = Very High)", min_value=0.0, max_value=10.0, value=5.0)
+energy_level = st.number_input("Enter Your Energy Level (40 = Very Low, 70 = Very High)", min_value=40.0, max_value=70.0, value=50.0)
 
 immune_weakness = st.selectbox("Do You Have a Weak Immune System?", ["No", "Yes"])
 
@@ -127,4 +127,5 @@ if st.button("Predict"):
     if prediction[0] == 1:
         st.error("⚠️ High Risk of Lung Cancer")
     else:
+
         st.success("✅ Low Risk of Lung Cancer")
